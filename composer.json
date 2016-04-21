@@ -10,7 +10,7 @@
             "email": "office@groupfivesoftware.com"
         }
     ],
-    "required": {
+    "require": {
         "php": ">= 5.3.9",
         "symfony/security-bundle": "~2.3|~3.0",
         "symfony/framework-bundle": "~2.3|~3.0",
