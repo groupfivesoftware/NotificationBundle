@@ -1,8 +1,8 @@
 # 1. Installation
-### ..1. Install via composer
+### Install via composer
 `composer require gfs/notifications ~v1.0`
 
-### ..2. add to AppKernel
+### Add to AppKernel.php
 ```php
 new GFS\NotificationBundle\NotificationBundle(),
 ```
