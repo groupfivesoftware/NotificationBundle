@@ -1,19 +1,19 @@
 {
-    "name": "gfs/notifications"
-    "version": "0.1"
-    "description": "Symfony GFSNotificationsBundle"
-    "keywords": ["User notifications"]
-    "homepage": "https://github.com/groupfivesoftware"
+    "name": "gfs/notifications",
+    "version": "0.1",
+    "description": "Symfony GFSNotificationsBundle",
+    "keywords": ["User notifications"],
+    "homepage": "https://github.com/groupfivesoftware",
     "authors": [
         {
-            "name": "Group Five Software"
+            "name": "Group Five Software",
             "email": "office@groupfivesoftware.com"
         }
-    ]
+    ],
     "required": {
-        "php": ">= 5.3.9"
-        "symfony/security-bundle": "~2.3|~3.0"
-        "symfony/framework-bundle": "~2.3|~3.0"
+        "php": ">= 5.3.9",
+        "symfony/security-bundle": "~2.3|~3.0",
+        "symfony/framework-bundle": "~2.3|~3.0",
         "cboden/ratchet": "0.3.*"
     }
 }
