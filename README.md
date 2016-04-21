@@ -1,13 +1,13 @@
-# 1. Installation
-## 1. Install via composer
+1. # Installation
+..1. ### Install via composer
 `composer require gfs/notifications ~v1.0`
 
-## 2. add to AppKernel
+..2. ### add to AppKernel
 ```php
 new GFS\NotificationBundle\NotificationBundle(),
 ```
 
-# 2. Create Notification
+2. # Create Notification
 ```php
 use GFS\NotificationBundle\Entity\Notification as Base;
 class Notifications extends Base
@@ -81,12 +81,12 @@ class Notifications extends Base
 
 Function jsonSerialize should return an array that must contain field 'userId', the server check all connections if contain this value.
 
-# 3. Start server
+3. # Start server
 Symfony 2 `php app/console server:notification`
 
 Symfony 3 `php bin/console server:notification`
 
-# 4. Client job
+4. # Client job
 Use any websocket you want or any tehnologii. The most import thing is url, he must have GET paramter userId, that parameter will be bind to current connection.
 This userId is used when you create a notification, the paramter `userId` come from function `jsonSerialize` are use to mach connection and send notification.
 
@@ -102,7 +102,7 @@ conn.onmessage = function(e) {
 };
 ```
 
-# 5. Create a notification
+5. # Create a notification
 Just simple create an entity Notification. After success insert in database a notification will be send to server and server will find connection that match `userId` field from `jsonSerialize`.
 
 ```php
