@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: laurentiu
- * Date: 4/21/16
- * Time: 8:49 AM
- */
 
 namespace GFS\NotificationBundle\DependencyInjection;
 

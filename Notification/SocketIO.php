@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: laurentiu
- * Date: 4/19/16
- * Time: 12:55 PM
- */
 
 namespace GFS\NotificationBundle\Notification;
 
@@ -14,9 +8,9 @@ class SocketIO
      * @param null $host - $host of socket server
      * @param null $port - port of socket server
      * @param string $action - action to execute in sockt server
-     * @param null $data - message to socket server
      * @param string $address - addres of socket.io on socket server
      * @param string $transport - transport type
+     * @internal param null $data - message to socket server
      * @return bool
      */
     public function send($host = null, $port = null, $action= "message", $address = "/", $transport = 'websocket')

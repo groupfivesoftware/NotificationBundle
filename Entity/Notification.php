@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: laurentiu
- * Date: 4/19/16
- * Time: 12:35 PM
- */
 
 namespace GFS\NotificationBundle\Entity;
 

@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: laurentiu
- * Date: 4/18/16
- * Time: 5:07 PM
- */
 
 namespace GFS\NotificationBundle\Notification;
 

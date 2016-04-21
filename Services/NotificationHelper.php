@@ -1,16 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: laurentiu
- * Date: 4/18/16
- * Time: 5:17 PM
- */
 
 namespace GFS\NotificationBundle\Services;
 
 
-use NotificationBundle\Entity\Notification;
-use NotificationBundle\Notification\SocketIO;
+use GFS\NotificationBundle\Entity\Notification;
+use GFS\NotificationBundle\Notification\SocketIO;
 use Symfony\Component\DependencyInjection\Container;
 
 class NotificationHelper {
