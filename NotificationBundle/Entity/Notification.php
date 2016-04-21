@@ -6,7 +6,7 @@
  * Time: 12:35 PM
  */
 
-namespace NotificationBundle\Entity;
+namespace GFS\NotificationBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\User;

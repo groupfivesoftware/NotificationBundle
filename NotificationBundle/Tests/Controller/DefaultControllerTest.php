@@ -1,6 +1,6 @@
 <?php
 
-namespace NotificationBundle\Tests\Controller;
+namespace GFS\NotificationBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

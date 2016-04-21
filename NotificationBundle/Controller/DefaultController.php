@@ -1,6 +1,6 @@
 <?php
 
-namespace NotificationBundle\Controller;
+namespace GFS\NotificationBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 

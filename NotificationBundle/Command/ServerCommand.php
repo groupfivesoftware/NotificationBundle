@@ -6,10 +6,10 @@
  * Time: 5:11 PM
  */
 
-namespace NotificationBundle\Command;
+namespace GFS\NotificationBundle\Command;
 
 
-use NotificationBundle\Notification\Notification;
+use GFS\NotificationBundle\Notification\Notification;
 use Ratchet\Http\HttpServer;
 use Ratchet\Server\IoServer;
 use Ratchet\WebSocket\WsServer;

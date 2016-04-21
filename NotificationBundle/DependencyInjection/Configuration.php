@@ -6,7 +6,7 @@
  * Time: 9:00 AM
  */
 
-namespace NotificationBundle\DependencyInjection;
+namespace GFS\NotificationBundle\DependencyInjection;
 
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;

@@ -6,7 +6,7 @@
  * Time: 5:17 PM
  */
 
-namespace NotificationBundle\Services;
+namespace GFS\NotificationBundle\Services;
 
 
 use NotificationBundle\Entity\Notification;

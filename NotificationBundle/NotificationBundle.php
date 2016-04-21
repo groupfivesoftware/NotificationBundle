@@ -1,6 +1,6 @@
 <?php
 
-namespace NotificationBundle;
+namespace GFS\NotificationBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

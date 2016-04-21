@@ -6,7 +6,7 @@
  * Time: 12:55 PM
  */
 
-namespace NotificationBundle\Notification;
+namespace GFS\NotificationBundle\Notification;
 
 class SocketIO
 {

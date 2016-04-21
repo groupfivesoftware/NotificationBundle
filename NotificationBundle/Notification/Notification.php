@@ -6,7 +6,7 @@
  * Time: 5:07 PM
  */
 
-namespace NotificationBundle\Notification;
+namespace GFS\NotificationBundle\Notification;
 
 
 use Guzzle\Http\QueryString;

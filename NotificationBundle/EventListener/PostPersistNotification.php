@@ -1,17 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: laurentiu
- * Date: 4/21/16
- * Time: 8:28 AM
- */
-
-namespace NotificationBundle\EventListener;
+namespace GFS\NotificationBundle\EventListener;
 
 
 use Doctrine\ORM\Event\LifecycleEventArgs;
-use NotificationBundle\Entity\Notification;
-use NotificationBundle\Services\NotificationHelper;
+use GFS\NotificationBundle\Entity\Notification;
+use GFS\NotificationBundle\Services\NotificationHelper;
 use Symfony\Component\DependencyInjection\Container;
 
 class PostPersistNotification {
@@ -35,4 +28,4 @@ class PostPersistNotification {
         }
 
     }
-} 
+}
