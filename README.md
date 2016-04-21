@@ -1,9 +1,13 @@
 # 1. Installation
 > Copy bundle in your project
+`composer require gfs/notifications ~v1.0`
+
+> add to AppKernel
+`new GFS\NotificationBundle\NotificationBundle(),`
 
 # 2. Create Notification
 ```php
-use NotificationBundle\Entity\Notification as Base;
+use GFS\NotificationBundle\Entity\Notification as Base;
 class Notifications extends Base
 {
     /**
