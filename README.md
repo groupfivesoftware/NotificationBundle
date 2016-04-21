@@ -85,7 +85,7 @@ Use any websocket you want or any tehnologii. The most import thing is url, he m
 This userId is used when you create a notification, the paramter `userId` come from function `jsonSerialize` are use to mach connection and send notification.
 
 ```javascript
-var conn = new WebSocket('ws://ibenefits.local:8080?userId='+$scope.username);
+var conn = new WebSocket('ws://yourip:8080?userId='+$scope.username);
 conn.onopen = function(e) {
     console.log("Connection established!");
 };
@@ -101,7 +101,7 @@ Just simple create an entity Notification. After success insert in database a no
 
 ```php
  $notification = new Notifications();
- $notification->setType('benefit')
+ $notification->setType('type')
      ->setDescription('Your Notification here')
      ->setUser($user)
  ;
