@@ -24,6 +24,6 @@ class NotificationExtension extends Extension{
     }
 
     public function getNamespace(){
-        return 'gfs';
+        return 'gfs_notifications';
     }
 } 
