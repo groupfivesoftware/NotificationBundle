@@ -3,6 +3,7 @@
     "version": "0.1",
     "description": "Symfony GFSNotificationsBundle",
     "keywords": ["User notifications"],
+    "license": "MIT",
     "homepage": "https://github.com/groupfivesoftware",
     "authors": [
         {
