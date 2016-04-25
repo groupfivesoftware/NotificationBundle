@@ -5,6 +5,7 @@ namespace GFS\NotificationBundle\Services;
 
 use GFS\NotificationBundle\Entity\Notification;
 use GFS\NotificationBundle\Notification\SocketIO;
+use GFS\NotificationBundle\NotificationBundle;
 use Symfony\Component\DependencyInjection\Container;
 
 class NotificationHelper {
@@ -28,7 +29,7 @@ class NotificationHelper {
         $socketio = new SocketIO();
         $host = $this->container->getParameter('gfs_notifications.config')['host'];
         $port = $this->container->getParameter('gfs_notifications.config')['port'];
-        if($socketio->send($host,$port,json_encode([ 'notification' => $notification, 'token' => GFS_NOTIFICATION_TOKEN]),"ws://$host:$port/")){
+        if($socketio->send($host,$port,json_encode([ 'notification' => $notification, 'token' => file_get_contents(NotificationBundle::getGfsNotificationToken())]),"ws://$host:$port/")){
             return true;
         }
 

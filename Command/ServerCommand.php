@@ -3,7 +3,7 @@
 namespace GFS\NotificationBundle\Command;
 
 
-use GFS\NotificationBundle\Notification\Notification;
+use GFS\NotificationBundle\NotificationBundle;
 use Ratchet\Http\HttpServer;
 use Ratchet\Server\IoServer;
 use Ratchet\WebSocket\WsServer;
@@ -21,8 +21,8 @@ class ServerCommand extends ContainerAwareCommand{
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $port = $this->getContainer()->getParameter('gfs_notifications.config')['port'];
-        $notification = $this->getContainer()->get('gfs_notifications.config')['notification'];
-        define('GFS_NOTIFICATION_TOKEN', md5(uniqid(rand(),true)));
+        file_put_contents(NotificationBundle::getGfsNotificationToken(),md5(uniqid(rand(),true)));
+        $notification = $this->getContainer()->getParameter('gfs_notifications.config')['notification'];
         $server = IoServer::factory(
             new HttpServer(
                 new WsServer(
@@ -32,6 +32,7 @@ class ServerCommand extends ContainerAwareCommand{
             $port
         );
 
+        $output->writeln('['.date('Y-m-d H:i:s').']Notification server has started.');
         $server->run();
     }
 } 

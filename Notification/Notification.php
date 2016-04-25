@@ -3,6 +3,7 @@
 namespace GFS\NotificationBundle\Notification;
 
 
+use GFS\NotificationBundle\NotificationBundle;
 use Guzzle\Http\QueryString;
 use Ratchet\ConnectionInterface;
 use Ratchet\MessageComponentInterface;
@@ -10,9 +11,11 @@ use Ratchet\MessageComponentInterface;
 class Notification implements MessageComponentInterface{
 
     protected $users = [];
+    private $GFS_NOTIFICATION_TOKEN;
 
     public function __construct(){
         $this->clients = new \SplObjectStorage();
+        $this->GFS_NOTIFICATION_TOKEN = file_get_contents(NotificationBundle::getGfsNotificationToken());
     }
 
     /**
@@ -73,7 +76,7 @@ class Notification implements MessageComponentInterface{
     {
         $notification = json_decode($msg,true);
 
-        if($notification['token'] == GFS_NOTIFICATION_TOKEN){
+        if($notification['token'] == $this->GFS_NOTIFICATION_TOKEN){
             $notification = $notification['notification'];
             if(!empty($this->users[$notification['userId']])){
                 foreach ($this->users[$notification['userId']] as $client) {
