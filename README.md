@@ -121,6 +121,7 @@ Create an entity: `Notification`. After successfully inserting it in the databas
 gfs_notifications:
     host: localhost # ip or DNS where server run default is localhost
     port: 8080 # port when server want run default is 8080
+    notification: GFS\NotificationBundle\Notification\Notification # you can implement your own Ratchet\MessageComponentInterface
 ```
 
 # Default Entity field:

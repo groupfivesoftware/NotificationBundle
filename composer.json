@@ -1,6 +1,6 @@
 {
     "name": "gfs/notifications",
-    "version": "v1.0",
+    "version": "v1.0.1",
     "description": "Symfony GFSNotificationsBundle",
     "keywords": ["User notifications"],
     "license": "MIT",
