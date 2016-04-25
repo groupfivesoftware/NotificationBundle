@@ -10,4 +10,5 @@ services:
         class: GFS\NotificationBundle\EventListener\PostPersistNotification
         arguments: [ "@notification.helper" ]
         tags:
-            - { name: doctrine.event_listener, event: postPersist }
+            - { name: doctrine.event_listener, event: postPersist, method: postPersist }
+            - { name: doctrine.event_listener, event: postUpdate, method: postUpdate }

@@ -73,10 +73,13 @@ class Notification implements MessageComponentInterface{
     {
         $notification = json_decode($msg,true);
 
-        if(!empty($this->users[$notification['userId']])){
-            foreach ($this->users[$notification['userId']] as $client) {
-                // The sender is not the receiver, send to each client connected
-                $client->send($msg);
+        if($notification['token'] == GFS_NOTIFICATION_TOKEN){
+            $notification = $notification['notification'];
+            if(!empty($this->users[$notification['userId']])){
+                foreach ($this->users[$notification['userId']] as $client) {
+                    // The sender is not the receiver, send to each client connected
+                    $client->send($msg);
+                }
             }
         }
     }

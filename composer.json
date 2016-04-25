@@ -15,7 +15,8 @@
         "php": ">= 5.3.9",
         "symfony/security-bundle": "~2.3|~3.0",
         "symfony/framework-bundle": "~2.3|~3.0",
-        "cboden/ratchet": "0.3.*"
+        "cboden/ratchet": "0.3.*",
+        "doctrine/orm": "*"
     },
     "autoload": {
         "psr-4": { "GFS\\NotificationBundle\\": "" }

@@ -28,7 +28,7 @@ class NotificationHelper {
         $socketio = new SocketIO();
         $host = $this->container->getParameter('gfs_notifications.config')['host'];
         $port = $this->container->getParameter('gfs_notifications.config')['port'];
-        if($socketio->send($host,$port,json_encode($notification),"ws://$host:$port/")){
+        if($socketio->send($host,$port,json_encode([ 'notification' => $notification, 'token' => GFS_NOTIFICATION_TOKEN]),"ws://$host:$port/")){
             return true;
         }
 

@@ -15,6 +15,7 @@ class Configuration implements ConfigurationInterface{
         $rootNode->children()
                 ->scalarNode('host')->defaultValue('localhost')->end()
                 ->scalarNode('port')->defaultValue('8080')->end()
+                ->scalarNode('notification')->defaultValue('GFS\NotificationBundle\Notification')->end()
             ->end();
 
         return $treeBuilder;

@@ -28,4 +28,18 @@ class PostPersistNotification {
         }
 
     }
+
+    public function postUpdate(LifecycleEventArgs $args){
+        $entity = $args->getEntity();
+
+        if(!$entity instanceof Notification) return;
+
+        $checkedAt = $entity->getCheckedAt();
+        if(empty($checkedAt) && $entity->getChecked() == 1){
+            $entityManager = $args->getEntityManager();
+            $entity->setCheckedAt(new \DateTime('now'));
+            $entityManager->flush();
+        }
+
+    }
 }

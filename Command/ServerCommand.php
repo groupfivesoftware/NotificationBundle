@@ -21,10 +21,12 @@ class ServerCommand extends ContainerAwareCommand{
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $port = $this->getContainer()->getParameter('gfs_notifications.config')['port'];
+        $notification = $this->getContainer()->get('gfs_notifications.config')['notification'];
+        define('GFS_NOTIFICATION_TOKEN', md5(uniqid(rand(),true)));
         $server = IoServer::factory(
             new HttpServer(
                 new WsServer(
-                    new Notification()
+                    new $notification()
                 )
             ),
             $port
