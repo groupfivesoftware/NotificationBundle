@@ -81,7 +81,7 @@ class Notification implements MessageComponentInterface{
             if(!empty($this->users[$notification['userId']])){
                 foreach ($this->users[$notification['userId']] as $client) {
                     // The sender is not the receiver, send to each client connected
-                    $client->send($msg);
+                    $client->send(json_encode($notification));
                 }
             }
         }

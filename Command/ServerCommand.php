@@ -22,6 +22,7 @@ class ServerCommand extends ContainerAwareCommand{
     {
         $port = $this->getContainer()->getParameter('gfs_notifications.config')['port'];
         file_put_contents(NotificationBundle::getGfsNotificationToken(),md5(uniqid(rand(),true)));
+        chmod(NotificationBundle::getGfsNotificationToken(),0777);
         $notification = $this->getContainer()->getParameter('gfs_notifications.config')['notification'];
         $server = IoServer::factory(
             new HttpServer(
